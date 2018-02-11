@@ -9,6 +9,7 @@ function update() {
     <div>
       <h1>Hello</h1>
       <h2>World</h2>
+      <h3>Goodbye</h3>
     </div>
   `)
 }
