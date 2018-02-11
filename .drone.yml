@@ -17,5 +17,5 @@ pipeline:
     access_key: ${RANCHER_ACCESS_KEY}
     secret_key: ${RANCHER_SECRET_KEY}
     service: drone-hello/hello
-    docker_image: aafrey/drone-test
+    docker_image: aafrey/drone-test:0.0.1
     secrets: [ rancher_access_key, rancher_secret_key ]
