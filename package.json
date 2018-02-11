@@ -4,14 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "browserify browser.js -o public/bundle.js",
     "test": "node tests/test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^16.0.0",
     "tape": "^4.8.0"
   },
   "dependencies": {
