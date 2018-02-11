@@ -6,6 +6,9 @@ update()
 
 function update() {
   yo.update(root, yo`
-    <h1>Hello</h1>
+    <div>
+      <h1>Hello</h1>
+      <h2>World</h2>
+    </div>
   `)
 }
