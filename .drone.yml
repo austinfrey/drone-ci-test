@@ -8,5 +8,6 @@ pipeline:
   publish:
     image: plugins/docker
     repo: aafrey/drone-test
+    username: ${DOCKER_USERNAME}
+    password: ${DOCKER_PASSWORD}
     tags: [ 0.0.1, latest ]
-    secrets: [ DOCKER_USERNAME, DOCKER_PASSWORD ]
