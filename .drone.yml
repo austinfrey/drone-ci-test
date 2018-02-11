@@ -10,3 +10,11 @@ pipeline:
     repo: aafrey/drone-test
     tags: [ 0.0.1, latest ]
     secrets: [ docker_username, docker_password ]
+
+  rancher:
+    image: peloton/drone-rancher
+    url: http://admin.zi.gy
+    access_key: ${rancher_access_key}
+    secret_key: ${rancher_secret_key}
+    service: drone-hello/hello
+    docker_image: aafrey/drone-test
