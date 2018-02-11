@@ -3,7 +3,6 @@ pipeline:
     image: node:8.9-alpine
     commands:
       - npm install
-      - npm run build
       - npm test
 
   publish:
