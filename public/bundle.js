@@ -11,11 +11,12 @@ function update() {
       <h1>Hello</h1>
       <h2>World</h2>
       <h3>Goodbye</h3>
+      <h4>Cruel World</h4>
     </div>
   `)
 }
 
-},{"yo-yo":10}],2:[function(require,module,exports){
+},{"yo-yo":11}],2:[function(require,module,exports){
 var document = require('global/document')
 var hyperx = require('hyperx')
 var onload = require('on-load')
@@ -170,7 +171,9 @@ module.exports = hyperx(belCreateElement, {comments: true})
 module.exports.default = module.exports
 module.exports.createElement = belCreateElement
 
-},{"global/document":3,"hyperx":6,"on-load":9}],3:[function(require,module,exports){
+},{"global/document":4,"hyperx":7,"on-load":10}],3:[function(require,module,exports){
+
+},{}],4:[function(require,module,exports){
 (function (global){
 var topLevel = typeof global !== 'undefined' ? global :
     typeof window !== 'undefined' ? window : {}
@@ -191,7 +194,7 @@ if (typeof document !== 'undefined') {
 module.exports = doccy;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"min-document":12}],4:[function(require,module,exports){
+},{"min-document":3}],5:[function(require,module,exports){
 (function (global){
 var win;
 
@@ -208,7 +211,7 @@ if (typeof window !== "undefined") {
 module.exports = win;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports = attributeToProperty
 
 var transform = {
@@ -229,7 +232,7 @@ function attributeToProperty (h) {
   }
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 var attrToProp = require('hyperscript-attribute-to-property')
 
 var VAR = 0, TEXT = 1, OPEN = 2, CLOSE = 3, ATTR = 4
@@ -512,7 +515,7 @@ var closeRE = RegExp('^(' + [
 ].join('|') + ')(?:[\.#][a-zA-Z0-9\u007F-\uFFFF_:-]+)*$')
 function selfClosing (tag) { return closeRE.test(tag) }
 
-},{"hyperscript-attribute-to-property":5}],7:[function(require,module,exports){
+},{"hyperscript-attribute-to-property":6}],8:[function(require,module,exports){
 'use strict';
 
 var range; // Create a range object for efficently rendering strings to elements.
@@ -1196,7 +1199,7 @@ var morphdom = morphdomFactory(morphAttrs);
 
 module.exports = morphdom;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 assert.notEqual = notEqual
 assert.notOk = notOk
 assert.equal = equal
@@ -1220,7 +1223,7 @@ function assert (t, m) {
   if (!t) throw new Error(m || 'AssertionError')
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /* global MutationObserver */
 var document = require('global/document')
 var window = require('global/window')
@@ -1324,7 +1327,7 @@ function eachMutation (nodes, fn) {
   }
 }
 
-},{"assert":8,"global/document":3,"global/window":4}],10:[function(require,module,exports){
+},{"assert":9,"global/document":4,"global/window":5}],11:[function(require,module,exports){
 var bel = require('bel') // turns template tag into DOM elements
 var morphdom = require('morphdom') // efficiently diffs + morphs two DOM elements
 var defaultEvents = require('./update-events.js') // default events to be copied when dom elements update
@@ -1368,7 +1371,7 @@ module.exports.update = function (fromNode, toNode, opts) {
   }
 }
 
-},{"./update-events.js":11,"bel":2,"morphdom":7}],11:[function(require,module,exports){
+},{"./update-events.js":12,"bel":2,"morphdom":8}],12:[function(require,module,exports){
 module.exports = [
   // attribute events (can be set with attributes)
   'onclick',
@@ -1405,7 +1408,5 @@ module.exports = [
   'onfocusin',
   'onfocusout'
 ]
-
-},{}],12:[function(require,module,exports){
 
 },{}]},{},[1]);
