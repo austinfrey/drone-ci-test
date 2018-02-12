@@ -13,6 +13,7 @@ function update() {
       <h4>Cruel World</h4>
       <h5>Last one</h5>
       <h6>switched stacks</h6>
+      <p>now we getting crazy</p>
     </div>
   `)
 }
