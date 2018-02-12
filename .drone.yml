@@ -9,7 +9,9 @@ pipeline:
   publish:
     image: plugins/docker
     repo: aafrey/drone-test
-    tags: [ 0.0.1, latest ]
+    tags:
+      - latest
+      - ${DRONE_COMMIT_SHA:0:8}
     secrets: [ docker_username, docker_password ]
 
   rancher:
