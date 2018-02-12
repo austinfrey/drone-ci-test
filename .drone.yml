@@ -11,7 +11,7 @@ pipeline:
     repo: aafrey/drone-test
     tags:
       - latest
-      - ${DRONE_COMMIT_SHA:0:8}
+      - 0.0.1-${DRONE_COMMIT_SHA:0:7}
     secrets: [ docker_username, docker_password ]
 
   rancher:
@@ -20,5 +20,5 @@ pipeline:
     access_key: ${RANCHER_ACCESS_KEY}
     secret_key: ${RANCHER_SECRET_KEY}
     service: drone-hello/hello
-    docker_image: aafrey/drone-test:0.0.1
+    docker_image: aafrey/drone-test
     secrets: [ rancher_access_key, rancher_secret_key ]
